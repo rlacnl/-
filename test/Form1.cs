@@ -20,7 +20,7 @@ namespace test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Bye bye");
+            Console.WriteLine("Bye Bye");
         }
     }
 }
