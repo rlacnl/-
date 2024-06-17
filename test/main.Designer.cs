@@ -104,7 +104,7 @@
             this.Bingo.Name = "Bingo";
             this.Bingo.Size = new System.Drawing.Size(57, 12);
             this.Bingo.TabIndex = 6;
-            this.Bingo.Text = "맞은 개수";
+            this.Bingo.Text = "맞은 번호";
             // 
             // wrong
             // 
@@ -113,7 +113,7 @@
             this.wrong.Name = "wrong";
             this.wrong.Size = new System.Drawing.Size(57, 12);
             this.wrong.TabIndex = 7;
-            this.wrong.Text = "틀린 개수";
+            this.wrong.Text = "틀린 번호";
             // 
             // score
             // 
