@@ -15,7 +15,7 @@ namespace test
         private void start_Click(object sender, EventArgs e)
         {
             string number = num.Text;
-            string Name = name.Text; // Assuming you have a TextBox named 'name'
+            string Name = name.Text; 
             string message = "메세지";
 
             if (string.IsNullOrWhiteSpace(number) && string.IsNullOrWhiteSpace(Name))
