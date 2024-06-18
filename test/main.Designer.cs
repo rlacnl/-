@@ -140,6 +140,7 @@
             this.Controls.Add(this.label1);
             this.Name = "main";
             this.Text = "main";
+            this.Load += new System.EventHandler(this.main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

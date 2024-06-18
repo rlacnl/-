@@ -5,12 +5,19 @@ namespace test
 {
     public partial class quizPage : Form
     {
+        public static string DataFromForm;
+        public static string DataFromForm1;
+
         private main _mainForm;
 
         public quizPage(main mainForm)
         {
             InitializeComponent();
             _mainForm = mainForm;
+        }
+
+        public quizPage()
+        {
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,7 +29,6 @@ namespace test
 
         private void quizPage_Load(object sender, EventArgs e)
         {
-            // Do nothing here for now
         }
 
         public void CollectResults()
@@ -57,8 +63,8 @@ namespace test
                 incorrectNumbers += "3 ";
             }
 
-            _mainForm.DataFromForm = "맞은 번호: " + correctNumbers.Trim();
-            _mainForm.DataFromForm1 = "틀린 번호: " + incorrectNumbers.Trim();
+            DataFromForm = correctNumbers;
+            DataFromForm1 = incorrectNumbers;
         }
     }
 }

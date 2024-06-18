@@ -5,8 +5,12 @@ namespace test
 {
     public partial class quizPage2 : Form
     {
-        private main _mainForm;
-        private quizPage _quizPage;
+        main _mainForm = new main();
+        quizPage _quizPage = new quizPage();
+
+        public static string DataFromForm3;
+        public static string DataFromForm4;
+        private quizPage quizPage;
 
         public quizPage2(main mainForm, quizPage quizPage)
         {
@@ -15,9 +19,14 @@ namespace test
             _quizPage = quizPage;
         }
 
+        public quizPage2(quizPage quizPage)
+        {
+            this.quizPage = quizPage;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             _quizPage.Show();
         }
 
@@ -34,20 +43,20 @@ namespace test
 
             if (one.Equals("해바라기씨"))
             {
-                _mainForm.DataFromForm += " 4";
+                DataFromForm3 += "4 ";
             }
             else
             {
-                _mainForm.DataFromForm1 += " 4";
+                DataFromForm4 += "4 ";
             }
 
             if (two.Equals("살이 빠진다"))
             {
-                _mainForm.DataFromForm += " 5";
+                DataFromForm3 += "5";
             }
             else
             {
-                _mainForm.DataFromForm1 += " 5";
+                DataFromForm4 += "5";
             }
         }
     }

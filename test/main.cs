@@ -5,8 +5,7 @@ namespace test
 {
     public partial class main : Form
     {
-        public string DataFromForm { get; set; }
-        public string DataFromForm1 { get; set; }
+        
 
         public main()
         {
@@ -31,9 +30,15 @@ namespace test
                 quizPage.Show();
                 quizPage.FormClosed += (s, args) => this.Show();
             }
+        }
 
-            Bingo.Text = DataFromForm;
-            wrong.Text = DataFromForm1;
+        private void main_Load(object sender, EventArgs e)
+        {
+            Bingo.Text = "맞은 번호 " + quizPage.DataFromForm + quizPage2.DataFromForm3;
+            wrong.Text = "틀린 번호 " + quizPage.DataFromForm1 + quizPage2.DataFromForm4;
+            int a = 0;
+            score.Text = "총점 " +  a.ToString();
+            a = Bingo.Text.Length;
         }
     }
 }
