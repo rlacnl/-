@@ -8,8 +8,6 @@ namespace test
         main _mainForm = new main();
         quizPage _quizPage = new quizPage();
 
-        public static string DataFromForm3;
-        public static string DataFromForm4;
         private quizPage quizPage;
 
         public quizPage2(main mainForm, quizPage quizPage)
@@ -43,20 +41,20 @@ namespace test
 
             if (one.Equals("해바라기씨"))
             {
-                DataFromForm3 += "4 ";
+                main.DataFromForm += "4 ";
             }
             else
             {
-                DataFromForm4 += "4 ";
+                main.DataFromForm1 += "4 ";
             }
 
             if (two.Equals("살이 빠진다"))
             {
-                DataFromForm3 += "5";
+                main.DataFromForm += "5";
             }
             else
             {
-                DataFromForm4 += "5";
+                main.DataFromForm1 += "5";
             }
         }
     }

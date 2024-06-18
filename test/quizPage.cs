@@ -5,8 +5,6 @@ namespace test
 {
     public partial class quizPage : Form
     {
-        public static string DataFromForm;
-        public static string DataFromForm1;
 
         private main _mainForm;
 
@@ -63,8 +61,8 @@ namespace test
                 incorrectNumbers += "3 ";
             }
 
-            DataFromForm = correctNumbers;
-            DataFromForm1 = incorrectNumbers;
+            main.DataFromForm = correctNumbers;
+            main.DataFromForm1 = incorrectNumbers;
         }
     }
 }
