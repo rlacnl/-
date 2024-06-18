@@ -32,30 +32,37 @@ namespace test
         {
             this.Close();
             _mainForm.Show();
-        }
-
-        private void quizPage2_Load(object sender, EventArgs e)
-        {
             string one = textBox1.Text;
             string two = textBox2.Text;
 
+            string true_num = "";
+            string false_num = "";
+
             if (one.Equals("해바라기씨"))
             {
-                main.DataFromForm += "4 ";
+                true_num += "4 ";
             }
             else
             {
-                main.DataFromForm1 += "4 ";
+                false_num += "4 ";
             }
 
             if (two.Equals("살이 빠진다"))
             {
-                main.DataFromForm += "5";
+                true_num += "5";
             }
             else
             {
-                main.DataFromForm1 += "5";
+                false_num += "5";
             }
+
+            main.DataFromForm += true_num;
+            main.DataFromForm1 += false_num;
+        }
+
+        private void quizPage2_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

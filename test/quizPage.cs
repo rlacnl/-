@@ -23,14 +23,6 @@ namespace test
             this.Hide();
             quizPage2 quizPage2 = new quizPage2(_mainForm, this);
             quizPage2.Show();
-        }
-
-        private void quizPage_Load(object sender, EventArgs e)
-        {
-        }
-
-        public void CollectResults()
-        {
             string correctNumbers = "";
             string incorrectNumbers = "";
 
@@ -61,8 +53,18 @@ namespace test
                 incorrectNumbers += "3 ";
             }
 
-            main.DataFromForm = correctNumbers;
-            main.DataFromForm1 = incorrectNumbers;
+            main.DataFromForm += correctNumbers;
+
+            main.DataFromForm1 += incorrectNumbers;
+        }
+
+        private void quizPage_Load(object sender, EventArgs e)
+        {
+        }
+
+        public void CollectResults()
+        {
+            
         }
     }
 }
