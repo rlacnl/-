@@ -5,10 +5,8 @@ namespace test
 {
     public partial class quizPage2 : Form
     {
-        main _mainForm = new main();
-        quizPage _quizPage = new quizPage();
-
-        private quizPage quizPage;
+        private main _mainForm;
+        private quizPage _quizPage;
 
         public quizPage2(main mainForm, quizPage quizPage)
         {
@@ -19,7 +17,7 @@ namespace test
 
         public quizPage2(quizPage quizPage)
         {
-            this.quizPage = quizPage;
+            this._quizPage = quizPage;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,8 +28,14 @@ namespace test
 
         private void button2_Click(object sender, EventArgs e)
         {
+            CollectResults();
             this.Close();
             _mainForm.Show();
+            _mainForm.UpdateLabels();
+        }
+
+        private void CollectResults()
+        {
             string one = textBox1.Text;
             string two = textBox2.Text;
 
@@ -49,11 +53,11 @@ namespace test
 
             if (two.Equals("살이 빠진다"))
             {
-                true_num += "5";
+                true_num += "5 ";
             }
             else
             {
-                false_num += "5";
+                false_num += "5 ";
             }
 
             main.DataFromForm += true_num;
@@ -62,7 +66,6 @@ namespace test
 
         private void quizPage2_Load(object sender, EventArgs e)
         {
-            
         }
     }
 }

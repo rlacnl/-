@@ -5,8 +5,8 @@ namespace test
 {
     public partial class main : Form
     {
-        public static string DataFromForm;
-        public static string DataFromForm1;
+        public static string DataFromForm = string.Empty;
+        public static string DataFromForm1 = string.Empty;
 
         public main()
         {
@@ -16,7 +16,7 @@ namespace test
         private void start_Click(object sender, EventArgs e)
         {
             string number = num.Text;
-            string Name = name.Text; 
+            string Name = name.Text;
             string message = "메세지";
 
             if (number.Trim().Length == 0 && Name.Trim().Length == 0)
@@ -35,14 +35,18 @@ namespace test
 
         private void main_Load(object sender, EventArgs e)
         {
+            UpdateLabels();
+        }
+
+        public void UpdateLabels()
+        {
             string true_num = DataFromForm;
             string false_num = DataFromForm1;
 
             Bingo.Text = "맞은 번호 " + true_num;
             wrong.Text = "틀린 번호 " + false_num;
-            int a = 0;
-            score.Text = "총점 " +  a.ToString();
-            a = Bingo.Text.Trim().Length;
+            int scoreValue = true_num.Trim().Split(' ').Length;
+            score.Text = "총점 " + scoreValue.ToString();
         }
     }
 }

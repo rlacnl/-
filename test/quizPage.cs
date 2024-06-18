@@ -5,7 +5,6 @@ namespace test
 {
     public partial class quizPage : Form
     {
-
         private main _mainForm;
 
         public quizPage(main mainForm)
@@ -20,9 +19,18 @@ namespace test
 
         private void button1_Click(object sender, EventArgs e)
         {
+            CollectResults();
             this.Hide();
             quizPage2 quizPage2 = new quizPage2(_mainForm, this);
             quizPage2.Show();
+        }
+
+        private void quizPage_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void CollectResults()
+        {
             string correctNumbers = "";
             string incorrectNumbers = "";
 
@@ -54,17 +62,7 @@ namespace test
             }
 
             main.DataFromForm += correctNumbers;
-
             main.DataFromForm1 += incorrectNumbers;
-        }
-
-        private void quizPage_Load(object sender, EventArgs e)
-        {
-        }
-
-        public void CollectResults()
-        {
-            
         }
     }
 }
